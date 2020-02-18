@@ -17,7 +17,12 @@ const forecast = (latitude, longitude, callback) => {
 				currently.temperature +
 				' degress out.  There is a ' +
 				currently.precipProbability +
-				'% chance of rain.';
+				'% chance of rain.' +
+				"Today's High will be " +
+				daily.data[0].temperatureHigh +
+				". Tonight's Low will be " +
+				daily.data[0].temperatureLow +
+				'.';
 			callback(undefined, forecastMsg);
 		}
 	});
